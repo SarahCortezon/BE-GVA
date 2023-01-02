@@ -1,0 +1,8 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>40</y><w>210</w><h>70</h></coordinates><panel_attributes>Configurator
+--
++configurer(void): void
++afficher(void): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>130</y><w>210</w><h>70</h></coordinates><panel_attributes>Database
+--
++stocker(void): void
++lister(void): void
++filtrer(void): void</panel_attributes><additional_attributes></additional_attributes></element></diagram>

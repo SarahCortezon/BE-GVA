@@ -1,8 +1,37 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>40</y><w>210</w><h>70</h></coordinates><panel_attributes>Configurator
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>108</y><w>189</w><h>63</h></coordinates><panel_attributes>Configurator
 --
 +configurer(void): void
-+afficher(void): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>130</y><w>210</w><h>70</h></coordinates><panel_attributes>Database
++afficher(void): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>189</y><w>189</w><h>63</h></coordinates><panel_attributes>Database
 --
 +stocker(void): void
 +lister(void): void
-+filtrer(void): void</panel_attributes><additional_attributes></additional_attributes></element></diagram>
++filtrer(void): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>414</x><y>153</y><w>189</w><h>63</h></coordinates><panel_attributes>Voiture
+--
+
+--
++ calculPrix(void): float</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>225</x><y>261</y><w>189</w><h>144</h></coordinates><panel_attributes>Chassis
+--
++ nbPortes: int
+
++ largeur: float
++ hauteur: float
++ longueur: float
++ longueurToit: float
+--
++ cx(void): float</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>63</x><y>270</y><w>108</w><h>54</h></coordinates><panel_attributes>EnumOption
+--
+Standard
+Luxe</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>162</x><y>279</y><w>81</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=
+option</panel_attributes><additional_attributes>70;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>207</y><w>207</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=
+chassis</panel_attributes><additional_attributes>200;10;200;40;10;40;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>612</x><y>261</y><w>189</w><h>144</h></coordinates><panel_attributes>Moteur
+--
++ energie	
+--
++ cx(void): float</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>522</x><y>207</y><w>207</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=
+moteur</panel_attributes><additional_attributes>10;10;10;40;210;40;210;60</additional_attributes></element></diagram>

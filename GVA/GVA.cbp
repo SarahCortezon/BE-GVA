@@ -38,11 +38,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Configurator.cpp" />
-		<Unit filename="Configurator.h" />
-		<Unit filename="Database.cpp" />
+		<Unit filename="include/Chassis.h" />
+		<Unit filename="include/Configurator.h" />
+		<Unit filename="include/Database.h" />
+		<Unit filename="include/Voiture.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Database.h" />
+		<Unit filename="src/Chassis.cpp" />
+		<Unit filename="src/Configurator.cpp" />
+		<Unit filename="src/Database.cpp" />
+		<Unit filename="src/Voiture.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

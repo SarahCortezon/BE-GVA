@@ -1,6 +1,8 @@
 #ifndef CHASSISBERLINE_H
 #define CHASSISBERLINE_H
 
+#include "Chassis.h"
+
 enum class BerlineSpecification {
     Standard,
     QuatreQuatre,
@@ -12,17 +14,20 @@ class ChassisBerline : public Chassis {
         ChassisBerline(ChassisOption option_, BerlineSpecification specification_);
         virtual ~ChassisBerline();
 
+        float calculerCx(void) override;
+        float calculerPrix(void) override;
     protected:
-        ChassisType type = ChassisType::Berline;
         BerlineSpecification specification;
+
+        ChassisType type = ChassisType::Berline;
         int nbPortes = 4;
 
     private:
-        float[3][4] dimensions = [
-            [4.6, 2, 1.4, 2.2],
-            [4.6, 0, 1.3, 2.5],
-            [4.6, 3.2, 1.4, 2.2]
-        ]
+        float dimensionsBySpecification[3][4] = {
+            {4.6, 2, 1.4, 2.2},
+            {4.6, 0, 1.3, 2.5},
+            {4.6, 3.2, 1.4, 2.2}
+        };
 };
 
 #endif // CHASSISBERLINE_H

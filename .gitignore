@@ -1,1 +1,4 @@
-GVA.layout
+GVA/GVA.layout
+bin/
+obj/
+GVA/GVA.depend

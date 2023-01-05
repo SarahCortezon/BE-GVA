@@ -1,11 +1,12 @@
 #include "Voiture.h"
 
-Voiture::Voiture()
-{
-    //ctor
-}
+//  Constructeurs
+Voiture::Voiture(void) {}
 
-Voiture::~Voiture()
-{
-    //dtor
+//  Destructeur
+Voiture::~Voiture(void) {}
+
+//  Methodes
+float Voiture::calculerPrix() {
+    return this->chassis->calculerPrix();
 }

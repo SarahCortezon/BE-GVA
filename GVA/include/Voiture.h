@@ -1,20 +1,19 @@
 #ifndef VOITURE_H
 #define VOITURE_H
 
+#include "Chassis.h"
 
-class Voiture
-{
+class Voiture {
     public:
-        // Constructeurs / Destructeurs
-        Voiture();
-        virtual ~Voiture();
+        Voiture(void);
+        virtual ~Voiture(void);
 
         // Attributs
-        Chassis chassis;
+        Chassis *chassis;
         //Moteur moteur;
 
         // Fonctions
-        float calculPrix();
+        float calculerPrix();
 
     protected:
 

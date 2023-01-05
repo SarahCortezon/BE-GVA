@@ -1,11 +1,5 @@
 #include "Chassis.h"
 
-Chassis::Chassis()
-{
-    //ctor
-}
+Chassis::Chassis(void) {}
 
-Chassis::~Chassis()
-{
-    //dtor
-}
+Chassis::~Chassis(void) {}

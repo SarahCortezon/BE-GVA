@@ -1,7 +1,7 @@
 #ifndef CHASSIS_H
 #define CHASSIS_H
 
-enum ChassisType {
+enum class ChassisType {
     Berline,
     Coupe
 };

@@ -39,11 +39,13 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Chassis.h" />
+		<Unit filename="include/ChassisBerline.h" />
 		<Unit filename="include/Configurator.h" />
 		<Unit filename="include/Database.h" />
 		<Unit filename="include/Voiture.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Chassis.cpp" />
+		<Unit filename="src/ChassisBerline.cpp" />
 		<Unit filename="src/Configurator.cpp" />
 		<Unit filename="src/Database.cpp" />
 		<Unit filename="src/Voiture.cpp" />

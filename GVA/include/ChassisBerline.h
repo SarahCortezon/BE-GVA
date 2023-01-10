@@ -3,31 +3,21 @@
 
 #include "Chassis.h"
 
-enum class BerlineSpecification {
-    Standard,
-    QuatreQuatre,
-    Break
-};
-
 class ChassisBerline : public Chassis {
     public:
-        ChassisBerline(ChassisOption option_, BerlineSpecification specification_);
+        ChassisBerline(ChassisOption option_);
         virtual ~ChassisBerline();
 
         float calculerCx(void) override;
         float calculerPrix(void) override;
-    protected:
-        BerlineSpecification specification;
 
-        ChassisType type = ChassisType::Berline;
+    protected:
         int nbPortes = 4;
+        float dimensions[4] = {4.6, 2, 1.4, 2.2};
 
     private:
-        float dimensionsBySpecification[3][4] = {
-            {4.6, 2, 1.4, 2.2},
-            {4.6, 0, 1.3, 2.5},
-            {4.6, 3.2, 1.4, 2.2}
-        };
+        float prix = 25000.;
+        float prixLuxe = 1500.;
 };
 
 #endif // CHASSISBERLINE_H

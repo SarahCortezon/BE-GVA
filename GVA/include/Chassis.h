@@ -1,11 +1,6 @@
 #ifndef CHASSIS_H
 #define CHASSIS_H
 
-enum class ChassisType {
-    Berline,
-    Coupe
-};
-
 enum ChassisOption {
     Standard,
     Luxe
@@ -15,28 +10,25 @@ enum ChassisDimension {
     L1,
     L2,
     h,
-    l,
-    last
+    l
 };
 
 class Chassis {
     public:
-        Chassis();
+        Chassis(ChassisOption option_);
         virtual ~Chassis(void) = 0;
 
         virtual float calculerCx(void) = 0;
-        virtual float calculerPrix(void) = 0;
-
-        //virtual string[] getInformation(void) = 0;
+        virtual float calculerPrix(void);
 
     protected:
-        ChassisType type;
         int nbPortes = 0;
+        float dimensions[4];
 
         ChassisOption option;
-        float dimmensions[4] = {0., 0., 0., 0.};
 
     private:
+        float R=0.03;
 };
 
 #endif // CHASSIS_H

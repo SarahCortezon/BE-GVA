@@ -5,12 +5,12 @@
 
 class Voiture {
     public:
-        Voiture(void);
+        Voiture(Chassis *chassis_);
         virtual ~Voiture(void);
 
         // Attributs
         Chassis *chassis;
-        //Moteur moteur;
+        //Moteur *moteur;
 
         // Fonctions
         float calculerPrix();

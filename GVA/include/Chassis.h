@@ -15,20 +15,19 @@ enum ChassisDimension {
 
 class Chassis {
     public:
-        Chassis(ChassisOption option_);
+        Chassis();
         virtual ~Chassis(void) = 0;
 
         virtual float calculerCx(void) = 0;
-        virtual float calculerPrix(void);
+        virtual float calculerPrix(void) = 0;
 
     protected:
-        int nbPortes = 0;
+        float R=0.03;
+        int nbPortes;
         float dimensions[4];
 
-        ChassisOption option;
-
     private:
-        float R=0.03;
+
 };
 
 #endif // CHASSIS_H

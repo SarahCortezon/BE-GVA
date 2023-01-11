@@ -5,7 +5,7 @@
 
 class ChassisBerline4x4 : public ChassisBerline {
     public:
-        ChassisBerline4x4(ChassisOption option_) : ChassisBerline(option_);
+        ChassisBerline4x4();
         virtual ~ChassisBerline4x4();
 
         float calculerCx(void) override;

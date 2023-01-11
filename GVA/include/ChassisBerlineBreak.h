@@ -3,9 +3,9 @@
 
 #include "ChassisBerline.h"
 
-class ChassisBerlineBreak : public ChassisBerline {
+class ChassisBerlineBreak: public ChassisBerline {
     public:
-        ChassisBerlineBreak(ChassisOption option_) : ChassisBerline(option_);
+        ChassisBerlineBreak();
         virtual ~ChassisBerlineBreak();
 
         float calculerCx(void) override;

@@ -1,8 +1,8 @@
 #include "MoteurThermique.h"
 
 enum MoteurCylindree {
-    1800,
-    2200
+    cc1800,
+    cc2200
 };
 
 MoteurThermique::MoteurThermique()

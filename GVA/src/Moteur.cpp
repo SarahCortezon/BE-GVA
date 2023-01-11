@@ -1,9 +1,9 @@
 #include "Moteur.h"
 
 float Essence::calculerPuissance {
-  K=0.07;
-  P=K*cylindree;
-  return P;
+    K=0.07;
+    P=K*cylindree;
+    return P;
 }
 
 float Diesel::calculerPuissance {

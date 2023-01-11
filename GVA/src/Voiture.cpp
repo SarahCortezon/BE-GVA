@@ -1,12 +1,13 @@
 #include "Voiture.h"
 
-//  Constructeurs
-Voiture::Voiture(void) {}
+Voiture::Voiture(Chassis *chassis_) : chassis(chassis_){
+    // pass
+}
 
-//  Destructeur
-Voiture::~Voiture(void) {}
+Voiture::~Voiture(void) {
+    // pass
+}
 
-//  Methodes
 float Voiture::calculerPrix() {
-    return this->chassis->calculerPrix();
+    return prixBase + chassis->calculerPrix();
 }

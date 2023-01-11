@@ -5,7 +5,7 @@
 
 class ChassisBerline : public Chassis {
     public:
-        ChassisBerline(ChassisOption option_);
+        ChassisBerline();
         virtual ~ChassisBerline();
 
         float calculerCx(void) override;
@@ -16,8 +16,7 @@ class ChassisBerline : public Chassis {
         float dimensions[4] = {4.6, 2, 1.4, 2.2};
 
     private:
-        float prix = 25000.;
-        float prixLuxe = 1500.;
+        float prixChassis = 0.;
 };
 
 #endif // CHASSISBERLINE_H

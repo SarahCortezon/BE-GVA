@@ -1,11 +1,19 @@
 #include "ChassisCoupe.h"
 
-ChassisCoupe::ChassisCoupe()
-{
-    //ctor
+ChassisCoupe::ChassisCoupe() : Chassis() {
+    // pass
+    //dimensions = dimensionsCoupe;
+    nbPortes = nbPortesCoupe;
 }
 
-ChassisCoupe::~ChassisCoupe()
-{
-    //dtor
+ChassisCoupe::~ChassisCoupe() {
+    // pass
+}
+
+float ChassisCoupe::calculerCx(void) {
+    return R*dimensions[l];
+}
+
+float ChassisCoupe::calculerPrix(void) {
+    return prixChassis;
 }

@@ -18,6 +18,7 @@ class Voiture {
     protected:
 
     private:
+        float prixBase = 25000.;
 };
 
 #endif // VOITURE_H

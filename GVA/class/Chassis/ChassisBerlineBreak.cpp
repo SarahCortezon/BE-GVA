@@ -1,7 +1,7 @@
 #include "ChassisBerlineBreak.h"
 
 ChassisBerlineBreak::ChassisBerlineBreak() : ChassisBerline() {
-    // pass
+    dimensions = {4.6, 3.2, 1.4, 2.2};
 }
 
 ChassisBerlineBreak::~ChassisBerlineBreak() {
@@ -12,6 +12,6 @@ float ChassisBerlineBreak::calculerCx(void) {
     return R * (dimensions[L1] + dimensions[L2])/2 * dimensions[l] * dimensions[h];
 }
 
-float ChassisBerlineBreak::calculerPrix(void) {
+int ChassisBerlineBreak::calculerPrix(void) {
     return ChassisBerline::calculerPrix() + prixSpecification;
 }

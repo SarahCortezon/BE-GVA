@@ -1,7 +1,7 @@
 #ifndef VOITURE_H
 #define VOITURE_H
 
-#include "Chassis.h"
+#include "./class/Chassis/Chassis.h"
 
 class Voiture {
     public:
@@ -13,12 +13,12 @@ class Voiture {
         //Moteur *moteur;
 
         // Fonctions
-        float calculerPrix();
+        int calculerPrix(void);
 
     protected:
 
     private:
-        float prixBase = 25000.;
+        int prixInitial = 25000;
 };
 
 #endif // VOITURE_H

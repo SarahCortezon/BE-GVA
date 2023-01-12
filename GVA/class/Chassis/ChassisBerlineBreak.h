@@ -9,13 +9,12 @@ class ChassisBerlineBreak: public ChassisBerline {
         virtual ~ChassisBerlineBreak();
 
         float calculerCx(void) override;
-        float calculerPrix(void) override;
+        int calculerPrix(void) override;
 
     protected:
-        float dimensions[4] = {4.6, 3.2, 1.4, 2.2};
 
     private:
-        float prixSpecification = 1000.;
+        int prixSpecification = 1000.;
 
 };
 

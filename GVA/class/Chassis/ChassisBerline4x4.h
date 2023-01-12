@@ -9,13 +9,12 @@ class ChassisBerline4x4 : public ChassisBerline {
         virtual ~ChassisBerline4x4();
 
         float calculerCx(void) override;
-        float calculerPrix(void) override;
+        int calculerPrix(void) override;
 
     protected:
-        float dimensions[4] = {4.6, 0, 1.3, 2.5};
 
     private:
-        float prixSpecification = 3000.;
+        int prixSpecification = 3000.;
 };
 
 #endif // CHASSISBERLINE4X4_H

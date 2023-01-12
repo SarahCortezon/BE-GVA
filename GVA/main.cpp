@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "ChassisBerline.h"
-#include "ChassisBerline4x4.h"
-#include "ChassisBerlineBreak.h"
-#include "ChassisCoupe.h"
+#include "class/Chassis/ChassisBerline.h"
+#include "class/Chassis/ChassisBerline4x4.h"
+#include "class/Chassis/ChassisBerlineBreak.h"
+#include "class/Chassis/ChassisCoupe.h"
 
 using namespace std;
 
@@ -35,7 +35,9 @@ int main()
     // ChassisCoupe
     cout << "\tChassisCoupe" << "\n";
     ChassisCoupe cc = ChassisCoupe();
-    cout << "Coef:\t" << cc.calculerCx() << " (= 0.3604)\n";
-    cout << "Prix:\t" << cc.calculerPrix() << " (= 1000.)\n\n";
+    cout << "Coef:\t" << cc.calculerCx() << " (= 0.1973)\n";
+    cout << "Prix:\t" << cc.calculerPrix() << " (= 2000.)\n\n";
+
+
     return 0;
 }

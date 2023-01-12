@@ -1,7 +1,6 @@
 #include "Chassis.h"
-#include <math.h>
 
-Chassis::Chassis() {
+Chassis::Chassis(void) {
     // pass
 }
 

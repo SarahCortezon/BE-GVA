@@ -1,30 +1,23 @@
 #ifndef CHASSIS_H
 #define CHASSIS_H
 
-enum ChassisOption {
-    Standard,
-    Luxe
-};
-
-enum ChassisDimension {
-    L1,
-    L2,
-    h,
-    l
-};
+#include <array>
+#include "Utils.h"
 
 class Chassis {
     public:
-        Chassis();
+        Chassis(void);
         virtual ~Chassis(void) = 0;
 
         virtual float calculerCx(void) = 0;
-        virtual float calculerPrix(void) = 0;
+        virtual int calculerPrix(void) = 0;
 
     protected:
-        float R=0.03;
+        float R = 0.03;
+
+        //  To Be Override
+        std::array<float, 4> dimensions;
         int nbPortes;
-        float dimensions[4];
 
     private:
 

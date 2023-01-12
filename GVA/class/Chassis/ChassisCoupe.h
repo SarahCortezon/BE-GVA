@@ -8,15 +8,13 @@ class ChassisCoupe : public Chassis {
         ChassisCoupe();
         virtual ~ChassisCoupe();
 
-        float calculerCx(void) override;
-        float calculerPrix(void) override;
+        virtual float calculerCx(void) override;
+        virtual int calculerPrix(void) override;
 
     protected:
-        nbPortes = 2;
-        dimensions = {4.6, 0.6, 1.3, 2.2};
 
     private:
-        prixChassis = 0.;
+        int prixChassis = 2000.;
 };
 
 #endif // CHASSISCOUPE_H

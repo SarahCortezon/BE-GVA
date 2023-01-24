@@ -38,17 +38,32 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Chassis.h" />
-		<Unit filename="include/ChassisBerline.h" />
-		<Unit filename="include/Configurator.h" />
-		<Unit filename="include/Database.h" />
-		<Unit filename="include/Voiture.h" />
+		<Unit filename="Configurator.cpp" />
+		<Unit filename="Configurator.h" />
+		<Unit filename="Database.cpp" />
+		<Unit filename="Database.h" />
+		<Unit filename="Utils.h" />
+		<Unit filename="Voiture.cpp" />
+		<Unit filename="Voiture.h" />
+		<Unit filename="class/Chassis/Chassis.cpp" />
+		<Unit filename="class/Chassis/Chassis.h" />
+		<Unit filename="class/Chassis/ChassisBerline.cpp" />
+		<Unit filename="class/Chassis/ChassisBerline.h" />
+		<Unit filename="class/Chassis/ChassisBerline4x4.cpp" />
+		<Unit filename="class/Chassis/ChassisBerline4x4.h" />
+		<Unit filename="class/Chassis/ChassisBerlineBreak.cpp" />
+		<Unit filename="class/Chassis/ChassisBerlineBreak.h" />
+		<Unit filename="class/Chassis/ChassisCoupe.cpp" />
+		<Unit filename="class/Chassis/ChassisCoupe.h" />
+		<Unit filename="class/Moteur/Moteur.cpp" />
+		<Unit filename="class/Moteur/Moteur.h" />
+		<Unit filename="class/Moteur/MoteurDiesel.cpp" />
+		<Unit filename="class/Moteur/MoteurDiesel.h" />
+		<Unit filename="class/Moteur/MoteurEssence.cpp" />
+		<Unit filename="class/Moteur/MoteurEssence.h" />
+		<Unit filename="class/Moteur/MoteurThermique.cpp" />
+		<Unit filename="class/Moteur/MoteurThermique.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Chassis.cpp" />
-		<Unit filename="src/ChassisBerline.cpp" />
-		<Unit filename="src/Configurator.cpp" />
-		<Unit filename="src/Database.cpp" />
-		<Unit filename="src/Voiture.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -6,11 +6,9 @@
 class MoteurEssence : public MoteurThermique {
     public:
         MoteurEssence(int cylindree_);
-        virtual ~MoteurEssence(void) = 0;
+        virtual ~MoteurEssence(void);
 
-        virtual float calculerPuissance(void) override;
         virtual float calculerConsommation(void) override;
-        virtual int calculerPrix(void) override;
 
     protected:
 

@@ -1,6 +1,7 @@
 #ifndef MOTEUR_H
 #define MOTEUR_H
 
+#include "../../Utils.h"
 
 class Moteur
 {
@@ -19,6 +20,7 @@ class Moteur
         int cylindree;
 
     private:
+
 };
 
 #endif // MOTEUR_H

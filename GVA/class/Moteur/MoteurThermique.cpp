@@ -1,13 +1,21 @@
 #include "MoteurThermique.h"
 
-MoteurThermique::MoteurThermique(int cylindree_) : Moteur() {
-    cylindree = cylindree;
+MoteurThermique::MoteurThermique(void) : Moteur() {
+    // pass
 }
 
 MoteurThermique::~MoteurThermique(void) {
     // pass
 }
 
+float MoteurThermique::calculerPuissance(void) {
+    return K * cylindree;
+}
+
 int MoteurThermique::calculerPrix(void) {
-    return
+    if (cylindree == 2200) {
+        return prixCylindree;
+    } else {
+        return 0;
+    }
 }

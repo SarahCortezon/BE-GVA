@@ -3,8 +3,11 @@
 #include "math.h"
 
 MoteurDiesel::MoteurDiesel(int cylindree_) : MoteurThermique() {
+    //  Associations des entrées
     cylindree = cylindree_;
-    K = 0.06;
+
+    // Définitions des variables
+    K = 0.07;
 }
 
 MoteurDiesel::~MoteurDiesel(void) {
@@ -12,7 +15,7 @@ MoteurDiesel::~MoteurDiesel(void) {
 }
 
 float MoteurDiesel::calculerConsommation(void) {
-    return (Q * calculerPuissance()) / log10(calculerPuissance() / 6) ;
+    return (Q * calculerPuissance()) / log10(calculerPuissance()/6) ;
 }
 
 int MoteurDiesel::calculerPrix(void) {

@@ -7,6 +7,8 @@
 
 #include "class/Moteur/MoteurEssence.h"
 #include "class/Moteur/MoteurDiesel.h"
+#include "class/Moteur/MoteurElectrique.h"
+#include "class/Moteur/MoteurHybride.h"
 
 using namespace std;
 
@@ -97,7 +99,23 @@ void test_ut() {
     cout << "Conso:\t" << md2.calculerConsommation() << " (= 5.4081)\n";
     cout << "Prix:\t" << md2.calculerPrix() << " (= 3000)\n\n";
 
-    // TOFINISH
+    cout << "\tMoteurElectrique" << "\n";
+    MoteurElectrique mee = MoteurElectrique();
+    cout << "P:\t" << mee.calculerPuissance() << " (= 70.)\n";
+    cout << "Conso:\t" << mee.calculerConsommation() << " (= 0.)\n";
+    cout << "Prix:\t" << mee.calculerPrix() << " (= 3000)\n\n";
+
+    cout << "\tMoteurHybride (cc1800)" << "\n";
+    MoteurHybride mh1 = MoteurHybride(1800);
+    cout << "P:\t" << mh1.calculerPuissance() << " (= 196.)\n";
+    cout << "Conso:\t" << mh1.calculerConsommation() << " (= 6.93.)\n";
+    cout << "Prix:\t" << mh1.calculerPrix() << " (= 3000)\n\n";
+
+    cout << "\tMoteurHybride (cc2200)" << "\n";
+    MoteurHybride mh2 = MoteurHybride(2200);
+    cout << "P:\t" << mh2.calculerPuissance() << " (= 224.)\n";
+    cout << "Conso:\t" << mh2.calculerConsommation() << " (= 8.47.)\n";
+    cout << "Prix:\t" << mh2.calculerPrix() << " (= 3000)\n\n";
 }
 
 void test_it() {

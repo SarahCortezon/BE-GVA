@@ -19,5 +19,5 @@ float MoteurDiesel::calculerConsommation(void) {
 }
 
 int MoteurDiesel::calculerPrix(void) {
-    return MoteurThermique::calculerPrix() + prixDiesel;
+    return Moteur::calculerPrix() + prixDiesel;
 }

@@ -15,7 +15,7 @@ class MoteurElectrique : public Moteur {
     protected:
 
     private:
-        float puissance = 70.
+        float puissance = 70.;
         int prixElectrique = 3000;
 };
 

@@ -1,5 +1,5 @@
 #include "MoteurEssence.h"
-#include <iostream>
+
 MoteurEssence::MoteurEssence(int cylindree_) : MoteurThermique() {
     //  Associations des entrées
     cylindree = cylindree_;

@@ -11,7 +11,7 @@ class Moteur
 
         virtual float calculerPuissance(void) = 0;
         virtual float calculerConsommation(void) = 0;
-        virtual int calculerPrix(void) = 0;
+        virtual int calculerPrix(void);
 
     protected:
         float Q = 0.055;
@@ -20,7 +20,7 @@ class Moteur
         int cylindree;
 
     private:
-
+        int prixCylindree = 1000;
 };
 
 #endif // MOTEUR_H

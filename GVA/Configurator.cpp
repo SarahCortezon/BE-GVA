@@ -1,11 +1,28 @@
 #include "Configurator.h"
 
-Configurator::Configurator()
-{
-    //ctor
+using namespace std;
+
+Configurator::Configurator() {
+    // pass
 }
 
-Configurator::~Configurator()
-{
-    //dtor
+Configurator::~Configurator() {
+    // pass
 }
+
+void Configurator::configurer(void) {
+
+}
+
+void Configurator::afficher(void) {
+
+}
+/**
+Chassis Configurator::configurerChassis(void) {
+
+}
+
+Moteur Configurator::configurerMoteur(void) {
+
+}
+*/

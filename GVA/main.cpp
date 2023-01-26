@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "Configurator.h"
+
 #include "class/Chassis/ChassisBerline.h"
 #include "class/Chassis/ChassisBerline4x4.h"
 #include "class/Chassis/ChassisBerlineBreak.h"
@@ -11,6 +13,8 @@
 #include "class/Moteur/MoteurHybride.h"
 
 using namespace std;
+
+Configurator configurator = Configurator();
 
 /************************************************
  *  Sequence de tests
@@ -108,16 +112,18 @@ void test_ut() {
     cout << "\tMoteurHybride (cc1800)" << "\n";
     MoteurHybride mh1 = MoteurHybride(1800);
     cout << "P:\t" << mh1.calculerPuissance() << " (= 196.)\n";
-    cout << "Conso:\t" << mh1.calculerConsommation() << " (= 6.93.)\n";
+    cout << "Conso:\t" << mh1.calculerConsommation() << " (= 6.93)\n";
     cout << "Prix:\t" << mh1.calculerPrix() << " (= 3000)\n\n";
 
     cout << "\tMoteurHybride (cc2200)" << "\n";
     MoteurHybride mh2 = MoteurHybride(2200);
     cout << "P:\t" << mh2.calculerPuissance() << " (= 224.)\n";
-    cout << "Conso:\t" << mh2.calculerConsommation() << " (= 8.47.)\n";
+    cout << "Conso:\t" << mh2.calculerConsommation() << " (= 8.47)\n";
     cout << "Prix:\t" << mh2.calculerPrix() << " (= 3000)\n\n";
 }
 
 void test_it() {
-    // TODO
+    cout << "=> Tests d'intégrations\n\n";
+
+
 }

@@ -2,23 +2,22 @@
 #define VOITURE_H
 
 #include "./class/Chassis/Chassis.h"
+#include "./class/Moteur/Moteur.h"
 
 class Voiture {
     public:
-        Voiture(Chassis *chassis_);
+        Voiture(Chassis *chassis_, Moteur *moteur_);
         virtual ~Voiture(void);
 
-        // Attributs
         Chassis *chassis;
-        //Moteur *moteur;
+        Moteur *moteur;
 
-        // Fonctions
         int calculerPrix(void);
 
     protected:
 
     private:
-        int prixInitial = 25000;
+        int prixDepartVoiture = 25000;
 };
 
 #endif // VOITURE_H

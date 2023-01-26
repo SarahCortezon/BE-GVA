@@ -21,7 +21,7 @@ class ChassisBerline : public Chassis {
     /**
      *  Attributs
      */
-    private
+    private:
         int prixBerline = 0;
 };
 

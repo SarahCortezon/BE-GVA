@@ -1,6 +1,6 @@
 #include "Voiture.h"
 
-Voiture::Voiture(Chassis *chassis_) : chassis(chassis_) {
+Voiture::Voiture(Chassis *chassis_, Moteur *moteur_) : chassis(chassis_), moteur(moteur_) {
     // pass
 }
 
@@ -9,5 +9,5 @@ Voiture::~Voiture(void) {
 }
 
 int Voiture::calculerPrix(void) {
-    return prixInitial + chassis->calculerPrix();
+    return prixDepartVoiture + chassis->calculerPrix() + moteur->calculerPrix();
 }

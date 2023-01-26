@@ -4,17 +4,25 @@
 #include "Chassis.h"
 
 class ChassisBerline : public Chassis {
+    /**
+     *  Constructeur(s) | Destructeur
+     */
     public:
         ChassisBerline();
         virtual ~ChassisBerline();
 
+    /**
+     *  Méthodes
+     */
+    public:
         virtual float calculerCx(void) override;
         virtual int calculerPrix(void) override;
 
-    protected:
-
-    private:
-        int prixChassis = 0;
+    /**
+     *  Attributs
+     */
+    private
+        int prixBerline = 0;
 };
 
 #endif // CHASSISBERLINE_H

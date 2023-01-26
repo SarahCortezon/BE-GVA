@@ -15,5 +15,5 @@ float ChassisBerline::calculerCx(void) {
 }
 
 int ChassisBerline::calculerPrix(void) {
-    return prixChassis;
+    return prixBerline;
 }

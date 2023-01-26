@@ -5,22 +5,28 @@
 #include "Utils.h"
 
 class Chassis {
+    /**
+     *  Constructeur(s) | Destructeur
+     */
     public:
         Chassis(void);
         virtual ~Chassis(void) = 0;
 
+    /**
+     *  Méthodes
+     */
+     public:
         virtual float calculerCx(void) = 0;
         virtual int calculerPrix(void) = 0;
 
+    /**
+     *  Attributs
+     */
     protected:
         float R = 0.03;
 
-        //  To Be Override
         std::array<float, 4> dimensions;
         int nbPortes;
-
-    private:
-
 };
 
 #endif // CHASSIS_H

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <list>
 
 #include "Configurator.h"
@@ -18,19 +19,19 @@ using namespace std;
 
 Configurator configurator = Configurator();
 
-/************************************************
+/**
  *  Sequence de tests
- ***********************************************/
+ */
 void test();
 
-/************************************************
+/**
  *  Tests unitaires
- ***********************************************/
+ */
 void test_ut();
 
-/************************************************
+/**
  *  Tests d'intégration
- ***********************************************/
+ */
 void test_it();
 
 
@@ -41,21 +42,31 @@ void test_it();
  ***********************************************/
 int main() {
     /**
-     *  Menu de lancement
+     *  Menu Principal
      */
-    int selection = selectionMenu("Menu de lancement", {
-        "Configurateur de voitures",
-        "Lancement des tests"});
+    string entete = "=> Menu Principal";
+    list<string> sections = {
+        "Configurateur",
+        "Tests"};
 
+    int selection = afficherMenu(entete, sections);
+
+    /**
+     *  1 = Section Configurateur
+     *  2 = Section Tests
+     */
     switch (selection) {
-    case 1:
-        configurator.configurer();
-        break;
-    case 2:
-        test();
-        break;
+        case 1:
+            configurator.configurer();
+            break;
+        case 2:
+            test();
+            break;
     }
 
+    /**
+     *  Sortie d'application
+     */
     return 0;
 }
 

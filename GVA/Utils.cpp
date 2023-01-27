@@ -2,7 +2,7 @@
 
 #include "Utils.h"
 
-int selectionMenu(string titre, list<string> listeChoix) {
+int afficherMenu(string titre, list<string> listeChoix) {
     cout << "\n" << titre << "\n";
     int i = 0;
     for (string choix : listeChoix) {

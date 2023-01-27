@@ -1,6 +1,8 @@
 #include <iostream>
+#include <list>
 
 #include "Configurator.h"
+#include "Utils.h"
 
 #include "class/Chassis/ChassisBerline.h"
 #include "class/Chassis/ChassisBerline4x4.h"
@@ -37,10 +39,21 @@ void test_it();
  *      APPLICATION
  *
  ***********************************************/
-int main()
-{
-    if (true) {
+int main() {
+    /**
+     *  Menu de lancement
+     */
+    int selection = selectionMenu("Menu de lancement", {
+        "Configurateur de voitures",
+        "Lancement des tests"});
+
+    switch (selection) {
+    case 1:
+        configurator.configurer();
+        break;
+    case 2:
         test();
+        break;
     }
 
     return 0;

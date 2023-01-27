@@ -11,7 +11,6 @@ Configurator::~Configurator() {
 }
 
 void Configurator::configurer(void) {
-
 }
 
 void Configurator::afficher(void) {

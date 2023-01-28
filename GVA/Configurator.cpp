@@ -35,6 +35,7 @@ void Configurator::configurer(void) {
 
 void Configurator::afficher(void) {
     cout << voiture->getInformations();
+    cout << "\n";
 }
 
 Chassis* Configurator::configurerChassis(void) {

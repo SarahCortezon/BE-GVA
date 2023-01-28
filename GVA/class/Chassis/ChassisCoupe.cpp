@@ -15,5 +15,5 @@ float ChassisCoupe::calculerCx(void) {
 }
 
 int ChassisCoupe::calculerPrix(void) {
-    return prixChassis;
+    return Chassis::calculerPrix() + prixChassis;
 }

@@ -5,8 +5,10 @@
 
 #include "class/Chassis/Chassis.h"
 #include "class/Moteur/Moteur.h"
+#include "Voiture.h"
 
 using namespace std;
+
 class Test {
     /**
      *  Constructeurs | Destructeurs
@@ -25,6 +27,9 @@ class Test {
         void it();
 
         void ut_chassis(Chassis* chassis, float cxAttendu, int prixAttendu, string infoAttendu);
+        void ut_moteur(Moteur* moteur, float pAttendu, float consoAttendu, int prixAttendu, string infoAttendu);
+
+        void it_voiture(Voiture* voiture, float vmaxAttendu, int prixAttendu);
 };
 
 #endif // TEST_H

@@ -11,7 +11,7 @@ class Chassis {
      *  Constructeurs | Destructeurs
      */
     public:
-        Chassis(void);
+        Chassis(int estLuxe_);
         virtual ~Chassis(void) = 0;
 
     /**
@@ -19,7 +19,7 @@ class Chassis {
      */
      public:
         virtual float calculerCx(void) = 0;
-        virtual int calculerPrix(void) = 0;
+        virtual int calculerPrix(void);
         std::string getInformation(void);
 
     /**
@@ -27,6 +27,8 @@ class Chassis {
      */
     protected:
         float R = 0.03;
+        int prixLuxe = 1500;
+        int estLuxe;
 
         std::array<float, 4> dimensions;
         int nbPortes;

@@ -1,6 +1,6 @@
 #include "ChassisBerlineBreak.h"
 
-ChassisBerlineBreak::ChassisBerlineBreak() : ChassisBerline() {
+ChassisBerlineBreak::ChassisBerlineBreak(int estLuxe_) : ChassisBerline(estLuxe_) {
     dimensions = {4.6, 3.2, 1.4, 2.2};
     information = "Chassis Berline Break";
 }

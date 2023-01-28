@@ -5,7 +5,7 @@
 
 class ChassisCoupe : public Chassis {
     public:
-        ChassisCoupe();
+        ChassisCoupe(int estLuxe_);
         virtual ~ChassisCoupe();
 
         virtual float calculerCx(void) override;

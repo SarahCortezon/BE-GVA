@@ -18,23 +18,22 @@ Test test = Test();
  ***********************************************/
 int main() {
     string entete;
-    list<string> sections;
+    list<string> listeChoix;
 
-    int selection;
+    int section;
 
     /**
      *  Menu Principal
      */
-
-    entete = "=> Menu Principal";
-    sections = {
+    entete = "Menu Principal";
+    listeChoix = {
         "Configurateur",
         "Test"
     };
 
-    selection = afficherMenu(entete, sections);
+    section = afficherMenu(entete, listeChoix);
 
-    switch (selection) {
+    switch (section) {
         case 1:
             configurator.configurer();
             break;

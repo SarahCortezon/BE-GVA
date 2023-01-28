@@ -10,7 +10,7 @@ class ChassisBerline : public Chassis {
      *  Constructeurs | Destructeurs
      */
     public:
-        ChassisBerline();
+        ChassisBerline(int estLuxe_);
         virtual ~ChassisBerline();
 
     /**

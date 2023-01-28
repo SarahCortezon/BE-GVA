@@ -1,7 +1,7 @@
 #include <math.h>
 #include "ChassisBerline.h"
 
-ChassisBerline::ChassisBerline(void) : Chassis() {
+ChassisBerline::ChassisBerline(int estLuxe_) : Chassis(estLuxe_) {
     dimensions = {4.6, 2, 1.4, 2.2};
     nbPortes = 4;
     information = "Chassis Berline";

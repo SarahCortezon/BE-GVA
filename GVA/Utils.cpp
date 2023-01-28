@@ -3,13 +3,24 @@
 #include "Utils.h"
 
 int afficherMenu(string titre, list<string> listeChoix) {
-    cout << "\n" << titre << "\n";
-    int i = 0;
+    int i, choixUtilisateur;
+
+    cout << "=> "<< titre << "\n\n";
+
+    i = 0;
     for (string choix : listeChoix) {
         i++;
-        cout << "\t" << i << ". " << choix << "\n";
+        cout << "  " << i << ". " << choix << "\n";
     }
-    int selection;
-    cin >> selection;
-    return selection;
+    cout << "\n";
+
+    cin >> choixUtilisateur;
+
+    system("clear");
+    return choixUtilisateur;
+}
+
+int afficherMenu(string titre, list<string> listeChoix, string contexte) {
+    cout << "Contexte:\t" << contexte << "\n\n";
+    return afficherMenu(titre, listeChoix);
 }

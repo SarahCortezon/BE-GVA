@@ -12,4 +12,6 @@ enum Dimensions { L1, L2, h, l };
 
 int afficherMenu(string titre, list<string> listeChoix);
 
+int afficherMenu(string titre, list<string> listeChoix, string contexte);
+
 #endif // UTILS_H

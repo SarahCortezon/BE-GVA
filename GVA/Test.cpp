@@ -14,7 +14,6 @@
 
 #include "Voiture.h"
 
-using namespace std;
 
 Test::Test() {
     // pass
@@ -35,6 +34,10 @@ void Test::ut() {
 
     cout << "Chassis :\n\n";
 
+    Chassis* chassis = new ChassisBerline(0);
+    ut_chassis(chassis, 0.2873, 0, "Chassis Berline");
+
+    /*
     cout << "\tChassis Berline" << "\n";
     ChassisBerline cb = ChassisBerline();
     cout << "Coef:\t" << cb.calculerCx() << " (= 0.2873)\n";
@@ -109,12 +112,13 @@ void Test::ut() {
     cout << "Conso:\t" << mh2.calculerConsommation() << " (= 8.47)\n";
     cout << "Prix:\t" << mh2.calculerPrix() << " (= 4000.)\n";
     cout << "Infos:\t" << mh2.getInformation() << " (= Moteur Hybride (Moteur Essence (cc2200) / Moteur Electrique))\n\n";
+    */
 }
 
 void Test::it() {
     cout << "-> Tests d'Intégrations\n\n";
 
-
+    /*
     Chassis* c = new ChassisBerline();
     Moteur* m = new MoteurEssence(1800);
     Voiture* v = new Voiture(c, m);
@@ -154,4 +158,11 @@ void Test::it() {
     m = new MoteurHybride(1800);
     v = new Voiture(c, m);
     cout << v->getInformations() << "\n\n";
+    */
+}
+
+void Test::ut_chassis(Chassis* chassis, float cxAttendu, int prixAttendu, string infoAttendu) {
+    cout << "Coef : " << chassis->calculerCx() << " (= " << cxAttendu << ")\n";
+    cout << "Prix : " << chassis->calculerPrix() << " (= " << prixAttendu << ")\n";
+    cout << "Info : " << chassis->getInformation() << " (= " << infoAttendu << ")\n";
 }

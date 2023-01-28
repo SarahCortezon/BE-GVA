@@ -38,66 +38,68 @@ void Configurator::afficher(void) {
 }
 
 Chassis* Configurator::configurerChassis(void) {
+    string entete, contexte = "Configurateur/Chassis";
+    list<string> listeChoix;
+
+    int type, luxe, specialite;
+
     /**
      *  Type de Chassis
      */
-    string entete = "=> Configurateur:\tType de Chassis";
-    list<string> listeChoix = {
+    entete = "Type";
+    listeChoix = {
         "Berline",
         "Coupé"
     };
 
-    int choix = afficherMenu(entete, listeChoix);
+    type = afficherMenu(entete, listeChoix, contexte);
 
     /**
-     *  1 = Berline
-     *  2 = Coupé
+     *  Option du Chassis
      */
-    switch (choix) {
-        case 1:
-            /**
-             *  Spécialisation Chassis
-             */
-            entete = "=> Configurateur:\tSpécialisation du Chassis";
-            listeChoix = {
-                "Standard",
-                "4x4",
-                "Break"
-            };
+    entete = "Option";
+    listeChoix = {
+        "Standard",
+        "Luxe",
+    };
 
-            choix = afficherMenu(entete, listeChoix);
+    luxe = afficherMenu(entete, listeChoix, contexte);
 
-            /**
-             * 1 = Standard
-             * 2 = 4x4
-             * 3 = Break
-             */
-            switch (choix) {
-                case 1:
-                    return new ChassisBerline();
-                    break;
-                case 2:
-                    return new ChassisBerline4x4();
-                    break;
-                case 3:
-                    return new ChassisBerlineBreak();
-                    break;
-            }
-            break;
-        case 2:
-            return new ChassisCoupe();
-            break;
+    if (type == 2) return new ChassisCoupe(luxe);
+
+    /**
+     *  Spécialisation Chassis
+     */
+    entete = "Spécialisation";
+    listeChoix = {
+        "Standard",
+        "4x4",
+        "Break"
+    };
+
+    specialite = afficherMenu(entete, listeChoix, contexte);
+
+    switch (specialite) {
+    case 1:
+        return new ChassisBerline(luxe);
+        break;
+    case 2:
+        return new ChassisBerline4x4(luxe);
+        break;
+    case 3:
+        return new ChassisBerlineBreak(luxe);
+        break;
     }
 }
 
 Moteur* Configurator::configurerMoteur(void) {
-    string entete;
+    string entete, contexte = "Configurateur/Moteur";
     list<string> listeChoix;
 
     int energie, cylindree;
 
     /**
-     *  Choix:  Type de Moteur
+     *  Type de Moteur
      */
     entete = "Type de Moteur";
     listeChoix = {
@@ -107,10 +109,10 @@ Moteur* Configurator::configurerMoteur(void) {
         "Hybride"
     };
 
-    energie = afficherMenu(entete, listeChoix);
+    energie = afficherMenu(entete, listeChoix, contexte);
 
     /**
-     *  Choix:  Cylindrée
+     *  Cylindrée
      */
     entete = "Cylindrée";
     listeChoix = {
@@ -118,7 +120,9 @@ Moteur* Configurator::configurerMoteur(void) {
         "2200"
     };
 
-    cylindree = afficherMenu(entete, listeChoix);
+    if (energie == 3) return new MoteurElectrique();
+
+    cylindree = afficherMenu(entete, listeChoix, contexte);
     if (cylindree == 1) {
         cylindree = 1800;
     } else {
@@ -126,17 +130,14 @@ Moteur* Configurator::configurerMoteur(void) {
     }
 
     switch (energie) {
-        case 1:
-            return new MoteurEssence(cylindree);
-            break;
-        case 2:
-            return new MoteurDiesel(cylindree);
-            break;
-        case 3:
-            return new MoteurElectrique();
-            break;
-        case 4:
-            return new MoteurHybride(cylindree);
-            break;
+    case 1:
+        return new MoteurEssence(cylindree);
+        break;
+    case 2:
+        return new MoteurDiesel(cylindree);
+        break;
+    case 4:
+        return new MoteurHybride(cylindree);
+        break;
     }
 }

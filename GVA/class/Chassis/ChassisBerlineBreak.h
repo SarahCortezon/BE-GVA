@@ -5,7 +5,7 @@
 
 class ChassisBerlineBreak: public ChassisBerline {
     public:
-        ChassisBerlineBreak();
+        ChassisBerlineBreak(int estLuxe_);
         virtual ~ChassisBerlineBreak();
 
         float calculerCx(void) override;

@@ -17,5 +17,9 @@ int Voiture::calculerPrix(void) {
 }
 
 std::string Voiture::getInformations(void) {
-    return "Voiture:\n  " + chassis->getInformation() + "\n  " + moteur->getInformation();
+    return "Voiture:\n  " +
+        chassis->getInformation() + "\n  " +
+        moteur->getInformation() + "\n  " +
+        "Vmax: " + std::to_string(calculerVmax()) + "\n  " +
+        "Prix: " + std::to_string(calculerPrix());
 }

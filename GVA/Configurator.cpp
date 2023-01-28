@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 #include <list>
 
@@ -33,7 +34,7 @@ void Configurator::configurer(void) {
 }
 
 void Configurator::afficher(void) {
-    voiture->getInformations();
+    cout << voiture->getInformations();
 }
 
 Chassis* Configurator::configurerChassis(void) {

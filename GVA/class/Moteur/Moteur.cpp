@@ -19,8 +19,8 @@ int Moteur::calculerPrix(void) {
 }
 
 std::string Moteur::getInformation() {
-    if (cylindree) {
-                return information + "(cc" + std::to_string(cylindree) + ")";
+    if (cylindree == 2200 || cylindree == 1800) {
+                return information + " (cc" + std::to_string(cylindree) + ")";
     }  else {
         return information;
     }

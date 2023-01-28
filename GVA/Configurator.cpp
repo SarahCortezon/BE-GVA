@@ -4,13 +4,11 @@
 #include "Configurator.h"
 #include "Utils.h"
 
-#include "class/Chassis/Chassis.h"
 #include "class/Chassis/ChassisBerline.h"
 #include "class/Chassis/ChassisBerline4x4.h"
 #include "class/Chassis/ChassisBerlineBreak.h"
 #include "class/Chassis/ChassisCoupe.h"
 
-#include "class/Moteur/Moteur.h"
 #include "class/Moteur/MoteurEssence.h"
 #include "class/Moteur/MoteurDiesel.h"
 #include "class/Moteur/MoteurElectrique.h"
@@ -29,10 +27,13 @@ Configurator::~Configurator() {
 void Configurator::configurer(void) {
     Chassis* chassis = configurerChassis();
     Moteur* moteur = configurerMoteur();
+
+    voiture = new Voiture(chassis, moteur);
+    afficher();
 }
 
 void Configurator::afficher(void) {
-
+    voiture->getInformations();
 }
 
 Chassis* Configurator::configurerChassis(void) {

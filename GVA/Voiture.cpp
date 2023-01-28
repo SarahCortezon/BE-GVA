@@ -8,6 +8,14 @@ Voiture::~Voiture(void) {
     // pass
 }
 
+float Voiture::calculerVmax() {
+    return 2 * moteur->calculerPuissance() * (1 - chassis->calculerCx());
+}
+
 int Voiture::calculerPrix(void) {
     return prixDepartVoiture + chassis->calculerPrix() + moteur->calculerPrix();
+}
+
+std::string Voiture::getInformations(void) {
+    return "Voiture:\n  " + chassis->getInformation() + "\n  " + moteur->getInformation();
 }

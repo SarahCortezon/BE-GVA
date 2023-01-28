@@ -3,6 +3,7 @@
 MoteurHybride::MoteurHybride(int cylindree_) : Moteur() {
     moteur_essence = new MoteurEssence(cylindree_);
     moteur_electrique = new MoteurElectrique();
+    information = "Moteur Hybride (" + moteur_essence->getInformation() + "/" + moteur_electrique->getInformation() + ")";
 }
 
 MoteurHybride::~MoteurHybride() {

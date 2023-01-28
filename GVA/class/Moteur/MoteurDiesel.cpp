@@ -3,11 +3,9 @@
 #include "math.h"
 
 MoteurDiesel::MoteurDiesel(int cylindree_) : MoteurThermique() {
-    //  Associations des entrées
     cylindree = cylindree_;
-
-    // Définitions des variables
     K = 0.07;
+    information = "Moteur Diesel";
 }
 
 MoteurDiesel::~MoteurDiesel(void) {

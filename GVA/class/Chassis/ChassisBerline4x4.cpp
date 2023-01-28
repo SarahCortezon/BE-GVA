@@ -2,6 +2,7 @@
 
 ChassisBerline4x4::ChassisBerline4x4() : ChassisBerline() {
     dimensions = {4.6, 0, 1.3, 2.5};
+    information = "Chassis Berline 4x4";
 }
 
 ChassisBerline4x4::~ChassisBerline4x4() {

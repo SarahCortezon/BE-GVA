@@ -3,6 +3,7 @@
 ChassisCoupe::ChassisCoupe(void) : Chassis() {
     dimensions =  {4.6, 0.6, 1.3, 2.2};
     nbPortes = 2;
+    information = "Chassis Coupé";
 }
 
 ChassisCoupe::~ChassisCoupe(void) {

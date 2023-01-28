@@ -1,7 +1,7 @@
 #include "MoteurElectrique.h"
 
 MoteurElectrique::MoteurElectrique() : Moteur() {
-    // pass
+    information = "Moteur Electrique";
 }
 
 MoteurElectrique::~MoteurElectrique() {

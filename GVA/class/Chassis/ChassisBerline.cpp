@@ -4,6 +4,7 @@
 ChassisBerline::ChassisBerline(void) : Chassis() {
     dimensions = {4.6, 2, 1.4, 2.2};
     nbPortes = 4;
+    information = "Chassis Berline";
 }
 
 ChassisBerline::~ChassisBerline(void) {

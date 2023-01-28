@@ -2,6 +2,7 @@
 
 ChassisBerlineBreak::ChassisBerlineBreak() : ChassisBerline() {
     dimensions = {4.6, 3.2, 1.4, 2.2};
+    information = "Chassis Berline Break";
 }
 
 ChassisBerlineBreak::~ChassisBerlineBreak() {

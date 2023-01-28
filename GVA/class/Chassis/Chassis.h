@@ -2,12 +2,13 @@
 #define CHASSIS_H
 
 #include <array>
+#include <string>
 
 #include "Utils.h"
 
 class Chassis {
     /**
-     *  Constructeur(s) | Destructeur
+     *  Constructeurs | Destructeurs
      */
     public:
         Chassis(void);
@@ -19,6 +20,7 @@ class Chassis {
      public:
         virtual float calculerCx(void) = 0;
         virtual int calculerPrix(void) = 0;
+        std::string getInformation(void);
 
     /**
      *  Attributs
@@ -28,6 +30,7 @@ class Chassis {
 
         std::array<float, 4> dimensions;
         int nbPortes;
+        std::string information;
 };
 
 #endif // CHASSIS_H

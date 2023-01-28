@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "Moteur.h"
 
 Moteur::Moteur(void) {
@@ -13,5 +15,13 @@ int Moteur::calculerPrix(void) {
         return prixCylindree;
     } else {
         return 0;
+    }
+}
+
+std::string Moteur::getInformation() {
+    if (cylindree) {
+                return information + "(cc" + std::to_string(cylindree) + ")";
+    }  else {
+        return information;
     }
 }

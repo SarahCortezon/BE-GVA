@@ -1,11 +1,13 @@
 #ifndef CHASSISBERLINE_H
 #define CHASSISBERLINE_H
 
+#include <string>
+
 #include "Chassis.h"
 
 class ChassisBerline : public Chassis {
     /**
-     *  Constructeur(s) | Destructeur
+     *  Constructeurs | Destructeurs
      */
     public:
         ChassisBerline();

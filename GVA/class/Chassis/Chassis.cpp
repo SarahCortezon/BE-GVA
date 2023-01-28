@@ -7,3 +7,7 @@ Chassis::Chassis(void) {
 Chassis::~Chassis(void) {
     // pass
 }
+
+std::string Chassis::getInformation(void) {
+    return information;
+}

@@ -42,6 +42,9 @@
 		<Unit filename="Configurator.h" />
 		<Unit filename="Database.cpp" />
 		<Unit filename="Database.h" />
+		<Unit filename="Test.cpp" />
+		<Unit filename="Test.h" />
+		<Unit filename="Utils.cpp" />
 		<Unit filename="Utils.h" />
 		<Unit filename="Voiture.cpp" />
 		<Unit filename="Voiture.h" />
@@ -59,8 +62,12 @@
 		<Unit filename="class/Moteur/Moteur.h" />
 		<Unit filename="class/Moteur/MoteurDiesel.cpp" />
 		<Unit filename="class/Moteur/MoteurDiesel.h" />
+		<Unit filename="class/Moteur/MoteurElectrique.cpp" />
+		<Unit filename="class/Moteur/MoteurElectrique.h" />
 		<Unit filename="class/Moteur/MoteurEssence.cpp" />
 		<Unit filename="class/Moteur/MoteurEssence.h" />
+		<Unit filename="class/Moteur/MoteurHybride.cpp" />
+		<Unit filename="class/Moteur/MoteurHybride.h" />
 		<Unit filename="class/Moteur/MoteurThermique.cpp" />
 		<Unit filename="class/Moteur/MoteurThermique.h" />
 		<Unit filename="main.cpp" />

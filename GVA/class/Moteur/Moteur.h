@@ -18,7 +18,7 @@ class Moteur {
         virtual float calculerPuissance(void) = 0;
         virtual float calculerConsommation(void) = 0;
         virtual int calculerPrix(void);
-        virtual std::string getInformation();
+        std::string getInformation();
 
     /**
      *  Attributs

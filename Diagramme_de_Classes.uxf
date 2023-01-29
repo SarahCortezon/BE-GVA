@@ -1,37 +1,124 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>108</y><w>189</w><h>63</h></coordinates><panel_attributes>Configurator
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>621</x><y>180</y><w>189</w><h>90</h></coordinates><panel_attributes>Voiture
 --
-+configurer(void): void
-+afficher(void): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>189</y><w>189</w><h>63</h></coordinates><panel_attributes>Database
+- int prixDepartVoiture
 --
-+stocker(void): void
-+lister(void): void
-+filtrer(void): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>414</x><y>153</y><w>189</w><h>63</h></coordinates><panel_attributes>Voiture
++ calculerVmax (void) : float
++ calculerPrix(void) : int
++ getInformation(void) : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>324</x><y>342</y><w>189</w><h>189</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+Chassis
 --
+Chassis(int estLuxe_)
+--
+# float R
+# int nbPortes
+# string information
+# array dimensions
+- int prixlLuxe
+- int estLuxe
+--
++ virtual calculerCx(void)  = 0: float
++ virtual calculerPrix(void) : int
++ getInformation(void) : string
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>405</x><y>261</y><w>315</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=
+chassis</panel_attributes><additional_attributes>320;10;320;70;10;70;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>963</x><y>342</y><w>261</w><h>162</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+Moteur
+--
+# float K, Q
+# int cylindree
+# string information
+- int prixCylindree
+--
++ virtual calculerPuissance(void) = 0 : float
++ virtual calculerConsommation(void) = 0 : float
++ virtual calculerPrix(void) : int
++ getInformation(void) : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>711</x><y>558</y><w>207</w><h>72</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+MoteurThermique
+--
+MoteurThermique(int cylindree_)
+--
++ virtual calculerPuissance(void) : float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>981</x><y>558</y><w>234</w><h>108</h></coordinates><panel_attributes>MoteurElectrique
+--
+- float puissance
+- int prixElectrique
+--
++ virtual calculerPuissance(void) : float
++ virtual calculerConsommation(void) : float
++ virtual calculerPrix(void) : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>693</y><w>234</w><h>72</h></coordinates><panel_attributes>MoteurEssence
+--
+MoteurEssence(int cylindree_)
+--
++ virtual calculerConsommation(void) : float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>828</x><y>693</y><w>243</w><h>90</h></coordinates><panel_attributes>MoteurDiesel
+--
+MoteurDiesel(int cylindree_)
+--
+- int prixDiesel
+--
++ virtual calculerConsommation(void) : float
++ virtual calculerPrix(void) : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>729</x><y>261</y><w>378</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=
+moteur</panel_attributes><additional_attributes>10;10;10;70;400;70;400;90</additional_attributes></element><element><id>Relation</id><coordinates><x>693</x><y>621</y><w>108</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>837</x><y>621</y><w>126</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>120;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>495</y><w>243</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;70;250;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1080</x><y>495</y><w>27</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1143</x><y>495</y><w>288</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>300;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>558</y><w>189</w><h>90</h></coordinates><panel_attributes>ChassisBerline
+--
+ChassisBerline(int estLuxe_)
+--
+- int prixBerline
+--
++ virtual calculerCx(void) : float
++ virtual calculerPrix(void) : int
 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>333</x><y>693</y><w>189</w><h>90</h></coordinates><panel_attributes>ChassisBerline4x4
 --
-+ calculPrix(void): float</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>225</x><y>261</y><w>189</w><h>144</h></coordinates><panel_attributes>Chassis
+ChassisBerline4x4(int estLuxe_)
 --
-+ nbPortes: int
+- int prixSpecification
+--
++ calculerCx(void) : float
++ calculerPrix(void) : int
 
-+ largeur: float
-+ hauteur: float
-+ longueur: float
-+ longueurToit: float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>441</x><y>558</y><w>189</w><h>90</h></coordinates><panel_attributes>ChassisCoupe
 --
-+ cx(void): float</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>63</x><y>270</y><w>108</w><h>54</h></coordinates><panel_attributes>EnumOption
+ChassisCoupe(int estLuxe_)
 --
-Standard
-Luxe</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>162</x><y>279</y><w>81</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+- int prixCoupe
+--
++ virtual calculerCx(void) : float
++ virtual calculerPrix(void) : int
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>693</y><w>189</w><h>90</h></coordinates><panel_attributes>ChassisBerlineBreak
+--
+ChassisBerlineBreak(int estLuxe_)
+--
+- int prixSpecification
+--
++ calculerCx(void) : float
++ calculerPrix(void) : int
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>261</x><y>522</y><w>153</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;40;150;10</additional_attributes></element><element><id>Relation</id><coordinates><x>414</x><y>522</y><w>144</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>140;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>639</y><w>180</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>297</x><y>639</y><w>144</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>140;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>621</x><y>27</y><w>189</w><h>90</h></coordinates><panel_attributes>Configurator
+--
+--
++ configurer (void) : void
++ afficher (void) : void
+- configurerChassis(void) : Chassis
+- configurerMoteur(void) : Chassis</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>702</x><y>108</y><w>63</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=
-option</panel_attributes><additional_attributes>70;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>207</y><w>207</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+voiture</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1287</x><y>549</y><w>234</w><h>117</h></coordinates><panel_attributes>MoteurHybride
+--
+MoteurHybride(int cylindree_)
+--
+- float puissance
+- int prixHybride
+--
++ virtual calculerPuissance(void) : float
++ virtual calculerConsommation(void) : float
++ virtual calculerPrix(void) : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>675</x><y>657</y><w>702</w><h>171</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=
-chassis</panel_attributes><additional_attributes>200;10;200;40;10;40;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>612</x><y>261</y><w>189</w><h>144</h></coordinates><panel_attributes>Moteur
---
-+ energie	
---
-+ cx(void): float</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>522</x><y>207</y><w>207</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+moteur_essence</panel_attributes><additional_attributes>750;10;750;170;10;170;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>1080</x><y>657</y><w>396</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=
-moteur</panel_attributes><additional_attributes>10;10;10;40;210;40;210;60</additional_attributes></element></diagram>
+moteur_electrique</panel_attributes><additional_attributes>410;10;410;60;10;60;10;10</additional_attributes></element></diagram>
